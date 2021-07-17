@@ -1,0 +1,18 @@
+You have a graph of n nodes. You are given an integer n and an array edges where edges[i] = [ai, bi] indicates that there is an edge between ai and bi in the graph.
+
+Return the number of connected components in the graph. (number of graphs)
+
+Input: n = 5, edges = [[0,1],[1,2],[3,4]]
+Output: 2
+
+space + time O(E+V)
+
+
+DFS
+
+1. Create an adjacency list such that adj[v] contains all the adjacent vertices of vertex v.
+2. Initialize a hashmap or array, visited, to track the visited vertices.
+3. Define a counter variable and initialize it to zero.
+4. Iterate over each vertex in edges, and if the vertex is not already in visited, start a DFS from it. Add every vertex visited during the DFS to visited.
+5. Every time a new DFS starts, increment the counter variable by one.
+6. At the end, the counter variable will contain the number of connected components in the undirected graph.
